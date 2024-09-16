@@ -1,0 +1,1158 @@
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+:root {
+    --padding: calc((100vw - 1440px) / 2);
+    --line-height: 1.5;
+}
+
+
+@keyframes opac {
+    0% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slider-anim {
+    0% {
+        opacity: 0.25;
+    }
+
+    15% {
+        opacity: 0.5;
+    }
+
+    30% {
+        opacity: 1;
+    }
+}
+
+@keyframes header-anim {
+    0% {
+        top: -100px;
+
+    }
+
+    50% {
+        top: -50px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes menu-anim {
+    0% {
+        top: -100px;
+        background: rgba(249, 253, 243, 0.3);
+
+    }
+
+    50% {
+        top: -50px;
+        background: rgba(249, 253, 243, 0.5);
+    }
+
+    100% {
+        top: 20px;
+        background: rgba(249, 253, 243, 1);
+    }
+}
+
+@keyframes scale-50 {
+    0% {
+
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+body {
+    /* height: auto; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body>section {
+    padding: 0 var(--padding);
+    min-width: 100%;
+}
+
+body a,
+body button {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section#header {
+    padding: 1rem 5%;
+    /* height: 100vh;
+    width: 100%; */
+    /* margin-bottom: -200px; */
+}
+
+section .header {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+section .header .logo-brand {
+    display: flex;
+    align-items: center;
+}
+
+section .header .logo-brand .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 35px;
+    max-height: 35px;
+}
+
+section .header .logo-brand .logo img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+section .header .logo-brand span {
+    font-family: "Space Grotesk";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 0;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+section .header .header-main {
+    display: flex;
+    gap: 70px;
+    justify-content: space-around;
+    align-items: center;
+    /* height: auto;
+    width: 100%; */
+    /* overflow: hidden; */
+}
+
+section .header .header-main .header-main-txt {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    gap: 0.5rem;
+}
+
+section .header .header-main .header-main-txt .owner-name {
+    font-family: "Kumbh Sans";
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: var(--line-height);
+    text-align: center;
+    color: rgba(12, 12, 12, 0.8);
+}
+
+section .header .header-main .header-main-txt .career-title {
+    font-family: "Kumbh Sans";
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: var(--line-height);
+    text-align: center;
+    color: rgba(16, 15, 15, 1);
+}
+
+section .header .header-main .header-main-txt .portfolio-desc {
+    font-family: "Kumbh Sans";
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: var(--line-height);
+    text-align: justify;
+    -webkit-hyphens: auto;
+            hyphens: auto;
+    color: rgba(16, 15, 15, 1);
+    padding-top: 1rem;
+}
+
+
+section .header .header-main .header-main-txt .social-pages{
+    /* align-self: self-start; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+
+section .header .header-main .header-main-txt .social-pages a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44.59px;
+    height: 45.16px;
+    border: 1.75px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+section .header .header-main .header-main-txt .social-pages a img{
+    width: 20px;
+    height: 20px;
+}
+
+
+section .header .header-main .test {
+    position: relative;
+    /* align-self: self-end; */
+    /* overflow: hidden; */
+}
+
+section .header .header-main .test::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -5%;
+    height: 60%;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 1);
+}
+
+section .header .header-main .header-main-img-container {
+    position: relative;
+    display: flex;
+    left: 5%;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    max-width: 400px; 
+    /* clip-path: polygon( 55.679% 1.715%,55.679% 1.715%,59.869% 2.518%,63.854% 3.683%,67.642% 5.179%,71.239% 6.976%,74.652% 9.045%,77.889% 11.354%,80.956% 13.874%,83.861% 16.575%,86.61% 19.426%,89.211% 22.398%,89.211% 22.398%,91.45% 25.221%,93.501% 28.135%,95.331% 31.133%,96.906% 34.204%,98.194% 37.34%,99.16% 40.53%,99.773% 43.766%,99.998% 47.037%,99.801% 50.336%,99.151% 53.652%,99.151% 53.652%,98.028% 56.851%,96.468% 59.818%,94.523% 62.577%,92.242% 65.155%,89.675% 67.574%,86.872% 69.859%,83.882% 72.035%,80.757% 74.125%,77.544% 76.155%,74.296% 78.149%,74.296% 78.149%,69.635% 81.195%,64.948% 84.53%,60.227% 87.961%,55.463% 91.298%,50.648% 94.348%,45.773% 96.92%,40.83% 98.822%,35.811% 99.863%,30.708% 99.85%,25.512% 98.593%,25.512% 98.593%,20.909% 96.202%,17.489% 93.011%,15.059% 89.15%,13.427% 84.747%,12.399% 79.931%,11.781% 74.831%,11.382% 69.575%,11.008% 64.293%,10.466% 59.114%,9.564% 54.166%,9.564% 54.166%,8.243% 49.591%,6.585% 44.976%,4.783% 40.351%,3.032% 35.747%,1.522% 31.195%,0.447% 26.727%,0.001% 22.373%,0.376% 18.164%,1.764% 14.132%,4.359% 10.306%,4.359% 10.306%,7.981% 6.956%,12.184% 4.361%,16.876% 2.446%,21.966% 1.135%,27.36% 0.352%,32.967% 0.023%,38.695% 0.07%,44.451% 0.418%,50.143% 0.992%,55.679% 1.715% ); */
+    max-height: 600px;
+    overflow: hidden;/* This hides the overflowing part of ::before */
+}
+
+section .header .header-main .header-main-img-container::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background-color: #c4c4c4; 
+    /* clip-path: polygon( 55.679% 1.715%,55.679% 1.715%,59.869% 2.518%,63.854% 3.683%,67.642% 5.179%,71.239% 6.976%,74.652% 9.045%,77.889% 11.354%,80.956% 13.874%,83.861% 16.575%,86.61% 19.426%,89.211% 22.398%,89.211% 22.398%,91.45% 25.221%,93.501% 28.135%,95.331% 31.133%,96.906% 34.204%,98.194% 37.34%,99.16% 40.53%,99.773% 43.766%,99.998% 47.037%,99.801% 50.336%,99.151% 53.652%,99.151% 53.652%,98.028% 56.851%,96.468% 59.818%,94.523% 62.577%,92.242% 65.155%,89.675% 67.574%,86.872% 69.859%,83.882% 72.035%,80.757% 74.125%,77.544% 76.155%,74.296% 78.149%,74.296% 78.149%,69.635% 81.195%,64.948% 84.53%,60.227% 87.961%,55.463% 91.298%,50.648% 94.348%,45.773% 96.92%,40.83% 98.822%,35.811% 99.863%,30.708% 99.85%,25.512% 98.593%,25.512% 98.593%,20.909% 96.202%,17.489% 93.011%,15.059% 89.15%,13.427% 84.747%,12.399% 79.931%,11.781% 74.831%,11.382% 69.575%,11.008% 64.293%,10.466% 59.114%,9.564% 54.166%,9.564% 54.166%,8.243% 49.591%,6.585% 44.976%,4.783% 40.351%,3.032% 35.747%,1.522% 31.195%,0.447% 26.727%,0.001% 22.373%,0.376% 18.164%,1.764% 14.132%,4.359% 10.306%,4.359% 10.306%,7.981% 6.956%,12.184% 4.361%,16.876% 2.446%,21.966% 1.135%,27.36% 0.352%,32.967% 0.023%,38.695% 0.07%,44.451% 0.418%,50.143% 0.992%,55.679% 1.715% ); */
+    z-index: 1;
+    box-sizing: border-box;
+    overflow: hidden; /* Extra safety to ensure ::before stays within boundaries */
+}
+
+section .header .header-main .header-main-img-container img {
+    display: block;
+    width: 100%;/* Matches the container's width */
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+/* OBJECTIVES SECTION STYLING FOR ALL SCREEN SIZES STARTS HERE  */
+section#objectives {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+section .objectives {
+    padding: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+section .objectives .objective {
+    margin: auto;
+    flex: 1 1 300px;
+    max-width: 300px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    border: 2px solid rgba(249, 195, 1, 0.4);
+    border-radius: 10.63px;
+}
+
+section .objectives .objective .obj-img-div {
+    margin: 2rem 1rem 0.5rem 2rem;
+    width: 100%;
+    height: 100%;
+    max-width: 45px;
+    max-height: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+section .objectives .objective .obj-img-div img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+section .objectives .objective .obj-txt-div {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 0.5rem 2rem 1rem 2rem;
+}
+
+section .objectives .objective .obj-txt-div h2 {
+    font-family: "Kumbh Sans";
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: var(--line-height);
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+section .objectives .objective .obj-txt-div p {
+    font-family: "Kumbh Sans";
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: var(--line-height);
+    text-align: left;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* ABOUT ME SECTION STYLING FOR ALL SCREEN SIZES STARTS HERE  */
+section#about-me {
+    background-color: rgba(249, 195, 1, 0.1);
+}
+
+section .about-me {
+    padding: 0 5%;
+    display: flex;
+    gap: 3rem;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+section .about-me .about-me-left {
+    position: relative;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+section .about-me .about-me-left .about-me-img-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    clip-path: polygon(55.679% 1.715%, 55.679% 1.715%, 59.869% 2.518%, 63.854% 3.683%, 67.642% 5.179%, 71.239% 6.976%, 74.652% 9.045%, 77.889% 11.354%, 80.956% 13.874%, 83.861% 16.575%, 86.61% 19.426%, 89.211% 22.398%, 89.211% 22.398%, 91.45% 25.221%, 93.501% 28.135%, 95.331% 31.133%, 96.906% 34.204%, 98.194% 37.34%, 99.16% 40.53%, 99.773% 43.766%, 99.998% 47.037%, 99.801% 50.336%, 99.151% 53.652%, 99.151% 53.652%, 98.028% 56.851%, 96.468% 59.818%, 94.523% 62.577%, 92.242% 65.155%, 89.675% 67.574%, 86.872% 69.859%, 83.882% 72.035%, 80.757% 74.125%, 77.544% 76.155%, 74.296% 78.149%, 74.296% 78.149%, 69.635% 81.195%, 64.948% 84.53%, 60.227% 87.961%, 55.463% 91.298%, 50.648% 94.348%, 45.773% 96.92%, 40.83% 98.822%, 35.811% 99.863%, 30.708% 99.85%, 25.512% 98.593%, 25.512% 98.593%, 20.909% 96.202%, 17.489% 93.011%, 15.059% 89.15%, 13.427% 84.747%, 12.399% 79.931%, 11.781% 74.831%, 11.382% 69.575%, 11.008% 64.293%, 10.466% 59.114%, 9.564% 54.166%, 9.564% 54.166%, 8.243% 49.591%, 6.585% 44.976%, 4.783% 40.351%, 3.032% 35.747%, 1.522% 31.195%, 0.447% 26.727%, 0.001% 22.373%, 0.376% 18.164%, 1.764% 14.132%, 4.359% 10.306%, 4.359% 10.306%, 7.981% 6.956%, 12.184% 4.361%, 16.876% 2.446%, 21.966% 1.135%, 27.36% 0.352%, 32.967% 0.023%, 38.695% 0.07%, 44.451% 0.418%, 50.143% 0.992%, 55.679% 1.715%);
+    max-width: 400px;
+    max-height: 600px;
+    /* overflow: hidden; */
+}
+
+section .about-me .about-me-left .about-me-img-container::after {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background-color: rgba(249, 195, 1, 1);
+    clip-path: polygon(55.679% 1.715%, 55.679% 1.715%, 59.869% 2.518%, 63.854% 3.683%, 67.642% 5.179%, 71.239% 6.976%, 74.652% 9.045%, 77.889% 11.354%, 80.956% 13.874%, 83.861% 16.575%, 86.61% 19.426%, 89.211% 22.398%, 89.211% 22.398%, 91.45% 25.221%, 93.501% 28.135%, 95.331% 31.133%, 96.906% 34.204%, 98.194% 37.34%, 99.16% 40.53%, 99.773% 43.766%, 99.998% 47.037%, 99.801% 50.336%, 99.151% 53.652%, 99.151% 53.652%, 98.028% 56.851%, 96.468% 59.818%, 94.523% 62.577%, 92.242% 65.155%, 89.675% 67.574%, 86.872% 69.859%, 83.882% 72.035%, 80.757% 74.125%, 77.544% 76.155%, 74.296% 78.149%, 74.296% 78.149%, 69.635% 81.195%, 64.948% 84.53%, 60.227% 87.961%, 55.463% 91.298%, 50.648% 94.348%, 45.773% 96.92%, 40.83% 98.822%, 35.811% 99.863%, 30.708% 99.85%, 25.512% 98.593%, 25.512% 98.593%, 20.909% 96.202%, 17.489% 93.011%, 15.059% 89.15%, 13.427% 84.747%, 12.399% 79.931%, 11.781% 74.831%, 11.382% 69.575%, 11.008% 64.293%, 10.466% 59.114%, 9.564% 54.166%, 9.564% 54.166%, 8.243% 49.591%, 6.585% 44.976%, 4.783% 40.351%, 3.032% 35.747%, 1.522% 31.195%, 0.447% 26.727%, 0.001% 22.373%, 0.376% 18.164%, 1.764% 14.132%, 4.359% 10.306%, 4.359% 10.306%, 7.981% 6.956%, 12.184% 4.361%, 16.876% 2.446%, 21.966% 1.135%, 27.36% 0.352%, 32.967% 0.023%, 38.695% 0.07%, 44.451% 0.418%, 50.143% 0.992%, 55.679% 1.715%);
+    z-index: 1;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+section .about-me .about-me-left .about-me-img-container img {
+    display: block;
+    width: 100%;/* Matches the container's width */
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+
+section .about-me .about-me-left .left-stat {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon( 55.309% 1.711%,55.309% 1.711%,59.472% 2.512%,63.431% 3.674%,67.194% 5.166%,70.767% 6.959%,74.158% 9.023%,77.374% 11.326%,80.421% 13.84%,83.306% 16.535%,86.038% 19.379%,88.622% 22.343%,88.622% 22.343%,90.846% 25.159%,92.883% 28.067%,94.701% 31.057%,96.266% 34.121%,97.545% 37.248%,98.506% 40.431%,99.114% 43.659%,99.337% 46.923%,99.143% 50.213%,98.497% 53.521%,98.497% 53.521%,97.38% 56.712%,95.831% 59.672%,93.899% 62.425%,91.633% 64.996%,89.083% 67.409%,86.298% 69.688%,83.328% 71.859%,80.223% 73.944%,77.032% 75.969%,73.804% 77.958%,73.804% 77.958%,69.174% 80.997%,64.518% 84.323%,59.828% 87.746%,55.095% 91.075%,50.311% 94.117%,45.468% 96.683%,40.558% 98.58%,35.572% 99.619%,30.502% 99.606%,25.34% 98.352%,25.34% 98.352%,20.767% 95.967%,17.37% 92.784%,14.956% 88.932%,13.334% 84.54%,12.312% 79.735%,11.699% 74.648%,11.303% 69.405%,10.931% 64.136%,10.393% 58.97%,9.496% 54.034%,9.496% 54.034%,8.184% 49.47%,6.537% 44.866%,4.747% 40.252%,3.007% 35.66%,1.507% 31.119%,0.439% 26.662%,-0.004% 22.318%,0.368% 18.12%,1.748% 14.097%,4.326% 10.281%,4.326% 10.281%,7.924% 6.939%,12.099% 4.35%,16.761% 2.44%,21.817% 1.132%,27.176% 0.352%,32.746% 0.022%,38.436% 0.069%,44.155% 0.417%,49.809% 0.989%,55.309% 1.711% );
+    background-color: rgba(255, 255, 255, 1);
+    top: 50%;
+    left: -10%;
+    width: 30%;
+    height: 20%;
+    max-width: 150%;
+    max-height: 150px;
+    z-index: 9;
+    font-family: "Kumbh Sans";
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: var(--line-height);
+    text-align: center;    
+    color: rgba(249, 195, 1, 1);
+    aspect-ratio: 1/1;
+}
+
+section .about-me .about-me-left .right-stat {
+    position: absolute;
+    clip-path: polygon( 55.309% 1.711%,55.309% 1.711%,59.472% 2.512%,63.431% 3.674%,67.194% 5.166%,70.767% 6.959%,74.158% 9.023%,77.374% 11.326%,80.421% 13.84%,83.306% 16.535%,86.038% 19.379%,88.622% 22.343%,88.622% 22.343%,90.846% 25.159%,92.883% 28.067%,94.701% 31.057%,96.266% 34.121%,97.545% 37.248%,98.506% 40.431%,99.114% 43.659%,99.337% 46.923%,99.143% 50.213%,98.497% 53.521%,98.497% 53.521%,97.38% 56.712%,95.831% 59.672%,93.899% 62.425%,91.633% 64.996%,89.083% 67.409%,86.298% 69.688%,83.328% 71.859%,80.223% 73.944%,77.032% 75.969%,73.804% 77.958%,73.804% 77.958%,69.174% 80.997%,64.518% 84.323%,59.828% 87.746%,55.095% 91.075%,50.311% 94.117%,45.468% 96.683%,40.558% 98.58%,35.572% 99.619%,30.502% 99.606%,25.34% 98.352%,25.34% 98.352%,20.767% 95.967%,17.37% 92.784%,14.956% 88.932%,13.334% 84.54%,12.312% 79.735%,11.699% 74.648%,11.303% 69.405%,10.931% 64.136%,10.393% 58.97%,9.496% 54.034%,9.496% 54.034%,8.184% 49.47%,6.537% 44.866%,4.747% 40.252%,3.007% 35.66%,1.507% 31.119%,0.439% 26.662%,-0.004% 22.318%,0.368% 18.12%,1.748% 14.097%,4.326% 10.281%,4.326% 10.281%,7.924% 6.939%,12.099% 4.35%,16.761% 2.44%,21.817% 1.132%,27.176% 0.352%,32.746% 0.022%,38.436% 0.069%,44.155% 0.417%,49.809% 0.989%,55.309% 1.711% );
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 43%;
+    right: -10%;
+    width: 30%;
+    height: 20%;
+    max-width: 150px;
+    max-height: 150px;
+    transform: rotate(-63.82deg);
+    transform-origin: center;
+}
+
+section .about-me .about-me-left .right-stat span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    transform: rotate(63.82deg);
+    transform-origin: center;
+}
+
+section .about-me .about-me-left .right-stat span p{
+    font-family: "Kumbh Sans";
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: var(--line-height);
+    text-align: center;    
+    color: rgba(249, 195, 1, 1);
+}
+
+section .about-me .about-me-left .right-stat span p:last-child{
+    color: rgba(0, 0, 0, 1);
+}
+
+
+section .about-me .about-me-left > span {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 0;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    max-height: 10%;
+    max-width: 30%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 24.1px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+section .about-me .about-me-left > span img:nth-child(1) {
+    position: absolute;
+    left: 20%;
+}
+
+section .about-me .about-me-left > span img:nth-child(2) {
+    position: absolute;
+    left: 30%;
+}
+
+section .about-me .about-me-left > span img:nth-child(3) {
+    position: absolute;
+    left: 40%;
+}
+
+section .about-me .about-me-left > span img:nth-child(4) {
+    position: absolute;
+    left: 50%;
+}
+
+section .about-me .about-me-left span img {
+    box-shadow: 0px 1.08px 2.44px 0px rgba(0, 0, 0, 0.25);
+    background: rgba(217, 217, 217, 1);
+    width: 20%;
+    max-width: 35px;
+    max-height: 35px;
+    border-radius: 50%;
+    transform: translateX(25%);
+    aspect-ratio: 1/1;
+}
+
+section .about-me .about-me-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+section .about-me .about-me-right h2 {
+    font-family: "Kumbh Sans";
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: var(--line-height);
+    text-align: left;
+    color: rgba(249, 195, 1, 1);
+}
+
+section .about-me .about-me-right p {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+section .about-me .about-me-right span {
+    font-family: "Kumbh Sans";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: var(--line-height);
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+section .about-me .about-me-right .hire-cv {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+}
+
+section .about-me .about-me-right .hire-cv a {
+    /* margin: auto; */
+    flex: 1 1 100px;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 130px;
+    padding: 3.88px;
+    border-radius: 19.38px;
+    background: rgba(249, 195, 1, 1);
+    border: 1px solid rgba(249, 195, 1, 1);
+    font-family: "Kumbh Sans";
+    font-size: 15px;
+    font-weight: 600;
+    line-height: var(--line-height);
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+section .about-me .about-me-right .hire-cv a:last-child {
+    background: none;
+    color: rgba(0, 0, 0, 1);
+}
+
+/* DESIGNS SECTION STYLING FOR ALL SCREEN SIZES STARTS HERE  */
+section#designs {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+section .designs {
+    padding: 0 5%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+}
+
+section .designs .designs-txt-container {
+    /* flex: 1 1 300px; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+section .designs .designs-txt-container h2 {
+    font-family: "Kumbh Sans";
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: var(--line-height);
+    text-align: left;
+    color: rgba(249, 195, 1, 1);
+}
+
+section .designs .designs-txt-container p {
+    font-family: "Kumbh Sans";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: var(--line-height);
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+section .designs .designs-img-container {
+    /* flex: 1 1 300px; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+section .designs .designs-img-container img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* APPRAISAL SECTION STYLING FOR ALL SCREEN SIZES STARTS HERE  */
+section#appraisal {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+section .appraisal {
+    margin: 0 5%;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(240, 240, 240, 1);
+    border-radius: 20px;
+    max-width: 1030px;
+    padding: 2rem;
+}
+
+section .appraisal .appraisal-txt {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+section .appraisal .appraisal-txt h4 {
+    white-space: nowrap;
+    font-family: "Kumbh Sans";
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: var(--line-height);
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+section .appraisal .appraisal-txt p {
+    font-family: "Kumbh Sans";
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: var(--line-height);
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+section .appraisal a {
+    /* flex: 1 1 100px; */
+    white-space: nowrap;
+    width: 100%;
+    max-width: 130px;
+    padding: 3.88px;
+    border-radius: 19.38px;
+    background: rgba(249, 195, 1, 1);
+    border: 1px solid rgba(249, 195, 1, 1);
+    font-family: "Kumbh Sans";
+    font-size: 15px;
+    font-weight: 600;
+    line-height: var(--line-height);
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+section .progress {
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(254, 249, 230, 1);
+}
+
+section .progress .progress-txt {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+section .progress .progress-txt>h2 {
+    font-family: "Kumbh Sans";
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+    color: rgba(249, 195, 1, 1);
+}
+
+section .progress .progress-txt>span {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+section .progress .progress-txt>span p {
+    font-family: Kumbh Sans;
+    font-size: 16.94px;
+    font-weight: 400;
+    line-height: 19.65px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+section .progress .progress-txt>a {
+    white-space: nowrap;
+    width: 100%;
+    max-width: 130px;
+    padding: 3.88px;
+    border-radius: 19.38px;
+    background: rgba(249, 195, 1, 1);
+    border: 1px solid rgba(249, 195, 1, 1);
+    font-family: "Kumbh Sans";
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: var(--line-height);
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+section .progress .progress-stats {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+section .progress .progress-stats .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+section .progress .progress-stats .stat h5 {
+    font-family: "Kumbh Sans";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: var(--line-height);
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+section .progress .progress-stats .progress-bar-percentage {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    width: 100%; /* Set the width you want for the hr */
+}
+
+section .progress .progress-stats .progress-bar-percentage hr {
+    position: relative;
+    width: 90%;
+    height: 10px; /* Height of the line */
+    border-radius: 10px;
+    margin: 0;
+    background-color: transparent; /* Default color is transparent */
+}
+
+section .progress .progress-stats .progress-bar-percentage hr::before,
+section .progress .progress-stats .progress-bar-percentage hr::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+section .progress .progress-stats .progress-bar-percentage hr::before {
+    background-color: rgba(249, 195, 1, 1);
+    width: var(--before-width, 0%);
+}
+
+section .progress .progress-stats .progress-bar-percentage hr::after {
+    background-color: rgba(217, 217, 217, 1);
+    left: var(--before-width, 0%);
+    width: calc(100% - var(--before-width, 0%));
+}
+
+section .progress .progress-stats .progress-bar-percentage p {
+    margin-left: 10px;
+    font-family: "Kumbh Sans";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: var(--line-height);
+    text-align: left;
+    color: rgba(249, 195, 1, 1);
+}
+
+/* CONTACT ME SECTION STYLING FOR ALL SCREEN SIZES STARTS HERE  */
+section#contact-me {
+    /* display: none; */
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+section .contact-me {
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+section .contact-me h2{
+    font-family: "Kumbh Sans";
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: var(--line-height);
+    text-align: center;
+    color: rgba(249, 195, 1, 1);    
+}
+
+section .contact-me .contact-me-main {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    width: 100%;
+}
+
+section .contact-me .personal-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    /* background: rgba(218, 230, 255, 1); */
+}
+
+section .contact-me .personal-info .dp-social{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .contact-me .personal-info .dp-social .dp-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: rgba(240, 240, 240, 1);
+    overflow: hidden;
+}
+
+section .contact-me .personal-info .dp-social .dp-wrapper img{
+    margin: auto;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    /* border-radius: 50%; */
+    /* aspect-ratio: 1/1; */
+}
+
+section .contact-me .personal-info .dp-social .social-pages{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+
+section .contact-me .personal-info .dp-social .social-pages a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44.59px;
+    height: 45.16px;
+    border: 1.75px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+section .contact-me .personal-info .dp-social .social-pages a img{
+    width: 20px;
+    height: 20px;
+}
+
+section .contact-me .contact-form {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Kumbh Sans';
+    border-radius: 10px;
+}
+
+section .contact-me .form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+section .contact-me .form-container label {
+    display: none;
+}
+
+section .contact-me .form-container>div {
+    background: rgba(242, 242, 242, 1);
+}
+
+section .contact-me input.cu,
+section .contact-me textarea.cutxt {
+    font-family: 'Kumbh Sans';
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+    padding: 12px 14px 12px 14px;
+    color: rgba(0, 0, 0, 1);
+    background: rgba(255, 255, 255, 1);
+    border: 0.64px solid rgba(0, 0, 0, 0.6);
+    border-radius: 7.23px;
+    outline: none;
+}
+
+section .contact-me .lname {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+section .contact-me .fname {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+section .contact-me .email {
+    position: relative;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+section .contact-me .error {
+    border-color: red;
+}
+
+section .contact-me #contact-us-email-error-message {
+    color: red;
+    display: none;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    font-family: "Kumbh Sans";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: var(--line-height);
+    text-align: left;
+}
+
+section .contact-me .phone {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column: span 2;
+}
+
+section .contact-me .message {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column: span 2;
+}
+
+section .contact-me .form-container>button {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column: span 2;
+    padding: 12px 10px 12px 10px;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(249, 195, 1, 1);
+    border: 1px solid rgba(249, 195, 1, 1);
+    border-radius: 5px;
+    font-family: 'Kumbh Sans';
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+section .contact-me .contact-form>div>p {
+    font-family: 'Kumbh Sans';
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    color: rgba(51, 51, 51, 1);
+}
+
+/* ERROR PAGE STYLING FOR ALL SCREEN SIZES STARTS HERE  */
+#error404 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error404 {
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 540px;
+    max-height: 540px;
+}
+
+.error404 img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.error404 a {
+    padding: 10px;
+    text-decoration: none;
+    color: rgba(51, 51, 51, 1);
+    font-family: "Kumbh Sans";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: var(--line-height);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.error404 a img {
+    width: 18.41px;
+    height: 14.71px;
+}
+
+@media screen and (max-width: 700px) {
+    section>div {
+        padding: 0 2rem;
+    }
+
+    /* HEADER SECTION STYLING FOR THIS SCREEN SIZE STARTS HERE  */
+    section .header .header-main {
+        flex-direction: column-reverse;
+    }
+
+    section .header .header-main .header-main-txt{
+        align-items: center;
+    }
+
+    section .header .header-main .header-main-txt .social-pages{
+        align-self: unset;
+    }
+
+    /* ABOUT-ME SECTION STYLING FOR THIS SCREEN SIZE STARTS HERE  */
+    section .about-me{
+        flex-direction: column;
+    }
+
+    section .about-me .about-me-right h2{
+        text-align: center;
+    }
+
+    section .about-me .about-me-left{
+        margin: 0 10%;
+    }
+
+    section .about-me .about-me-right{
+        align-items: center;
+    }
+
+    /* DESIGNS SECTION STYLING FOR THIS SCREEN SIZE STARTS HERE  */
+    section .designs{
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+    
+    section .designs .designs-txt-container{
+        align-items: center;
+    }
+
+    section .designs .designs-txt-container h2{
+        text-align: center;
+    }
+
+    /* PROGRESS SECTION STYLING FOR THIS SCREEN SIZE STARTS HERE  */
+    section .progress{
+        flex-direction: column;
+        padding: 0 5%;
+    }
+
+    section .progress .progress-txt{
+        align-items: center;
+    }
+
+    section .contact-me-main{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px){
+    section .appraisal{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link
+      rel="icon"
+      href="./assets/images/logo-without-name.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/index.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
+      integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/seedrandom@3.0.5/seedrandom.min.js"></script>
+  </head>
+  <style></style>
+  <body>
+    <section id="header">
+      <div class="header">
+        <a class="logo-brand" href="./test.html">
+          <div class="logo">
+            <img src="./assets/images/logo-without-name.svg" alt="logo" />
+          </div>
+          <span>Logo</span>
+        </a>
+        <div class="header-main">
+          <div class="header-main-txt">
+            <h2 class="owner-name">Jack Jhonson</h2>
+            <h2 class="career-title">UIUX DESIGNER/ANIMATOR</h2>
+            <h2 class="portfolio-desc">
+              Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+              lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis
+              condimentum ac, vestibulum eu nisl.
+            </h2>
+            <div class="social-pages">
+              <a href="./error404.html"><img src="./assets/images/linkedin-icon.svg" alt="linkedIn-icon"></a>
+              <a href="./error404.html"><img src="./assets/images/facebook-icon.svg" alt="facebook-icon"></a>
+              <a href="./error404.html"><img src="./assets/images/x-icon.svg" alt="x-icon"></a>
+            </div>
+          </div>
+          <div class="test">
+            <div class="header-main-img-container">
+              <img
+                src="./assets/images/passport-photo.png"
+                alt="Profile Image"
+                id="profileImage"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="objectives">
+      <div class="objectives">
+        <div class="objective obj-one">
+          <div class="obj-img-div">
+            <img src="./assets/images/uiux-rep-img.svg" alt="icon" />
+          </div>
+          <div class="obj-txt-div">
+            <h2 class="obj-title">UIUX</h2>
+            <p class="obj-txt">
+              Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis.
+            </p>
+          </div>
+        </div>
+
+        <div class="objective obj-two">
+          <div class="obj-img-div">
+            <img src="./assets/images/graphics-rep-img.svg" alt="icon" />
+          </div>
+          <div class="obj-txt-div">
+            <h2 class="obj-title">Graphics Design</h2>
+            <p class="obj-txt">
+              Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis.
+            </p>
+          </div>
+        </div>
+
+        <div class="objective obj-three">
+          <div class="obj-img-div">
+            <img src="./assets/images/visual-anim-rep-img.svg" alt="icon" />
+          </div>
+          <div class="obj-txt-div">
+            <h2 class="obj-title">Visual Animation</h2>
+            <p class="obj-txt">
+              Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-me">
+      <div class="about-me">
+        <div class="about-me-left">
+          <div class="about-me-img-container">
+            <img
+              src="./assets/images/about-me-main-img.png"
+              alt="Profile Image"
+              id="profileImage"
+            />
+          </div>
+          <!-- <div class="pyt-test">
+
+          </div> -->
+          <div class="left-stat">12k+</div>
+          <div class="right-stat">
+            <span>
+              <p>100k+</p>
+              <p>Clients</p>
+            </span>
+          </div>
+          <span class="satisfied-customers-images">
+            <img
+              src="./assets/images/sc-1.jpg"
+              alt="satisfied-customer-photo"
+            />
+            <img
+              src="./assets/images/sc-2.jpg"
+              alt="satisfied-customer-photo"
+            />
+            <img
+              src="./assets/images/sc-3.jpg"
+              alt="satisfied-customer-photo"
+            />
+            <img
+              src="./assets/images/sc-4.jpg"
+              alt="satisfied-customer-photo"
+            />
+          </span>
+        </div>
+        <div class="about-me-right">
+          <h2>About Me</h2>
+          <p>
+            <span
+              >Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis.</span
+            >
+            <span
+              >Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis.</span
+            >
+            <span
+              >Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos.</span
+            >
+          </p>
+          <div class="hire-cv">
+            <a href="./error404.html">Hire Me</a>
+            <a href="./error404.html">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="designs">
+      <div class="designs">
+        <div class="designs-txt-container">
+          <h2 class="design-title">Mobile Designs</h2>
+          <p>
+            Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis.
+          </p>
+          <p>
+            Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis.
+          </p>
+        </div>
+        <div class="designs-img-container">
+          <img src="./assets/images/mobile-design.png" alt="mobile designs" />
+        </div>
+      </div>
+    </section>
+
+    <section id="appraisal">
+      <div class="appraisal">
+        <div class="appraisal-txt">
+          <h4>Make It Look Awesome</h4>
+          <p>Let’s make something more meaningful and more visual</p>
+        </div>
+        <a href="">Hire Me</a>
+      </div>
+    </section>
+
+    <section id="progress">
+      <div class="progress">
+        <div class="progress-txt">
+          <h2>Creative And Professional Skillls On The Few Areas</h2>
+          <span>
+            <p>
+              Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis.
+            </p>
+            <p>
+              Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis.
+            </p>
+          </span>
+          <a href="">Contact Me</a>
+        </div>
+        <div class="progress-stats">
+          <div class="stat">
+            <h5>UIUX Designs</h5>
+            <span class="progress-bar-percentage">
+              <hr />
+              <p>75%</p>
+            </span>
+          </div>
+          <div class="stat">
+            <h5>Graphics and Visual Display</h5>
+            <span class="progress-bar-percentage">
+              <hr />
+              <p>20%</p>
+            </span>
+          </div>
+          <div class="stat">
+            <h5>Animation</h5>
+            <span class="progress-bar-percentage">
+              <hr />
+              <p>50%</p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-me">
+      <div class="contact-me">
+        <h2>CONTACT ME</h2>
+        <div class="contact-me-main">
+          <div class="personal-info">
+  
+            <div class="dp-social">
+              <div class="dp-wrapper">
+                <img src="./assets/images/dp-passport-photo.png" alt="dp-photo">
+              </div>
+              <div class="social-pages">
+                <a href="./error404.html"><img src="./assets/images/linkedin-icon.svg" alt="linkedIn-icon"></a>
+                <a href="./error404.html"><img src="./assets/images/facebook-icon.svg" alt="facebook-icon"></a>
+                <a href="./error404.html"><img src="./assets/images/x-icon.svg" alt="x-icon"></a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="contact-form" id="contact-form">
+            <form class="form-container">
+              <div class="lname">
+                <!-- <label for="lname">Last Name:</label> -->
+                <input
+                  class="cu"
+                  type="text"
+                  id="lname"
+                  name="lastName"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+              <div class="fname">
+                <!-- <label for="fname">First Name:</label> -->
+                <input
+                  class="cu"
+                  type="text"
+                  id="fname"
+                  name="firstName"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+              <div class="email">
+                <!-- <label for="email">Email:</label> -->
+                <input
+                  class="cu"
+                  type="email"
+                  id="contact-us-email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+                <span class="error-message" id="contact-us-email-error-message"
+                  >Please enter a valid email address.</span
+                >
+              </div>
+              <div class="phone">
+                <!-- <label for="phone">Phone Number:</label> -->
+                <input
+                  class="cu"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Phone Number"
+                  required
+                />
+              </div>
+              <div class="message">
+                <!-- <label for="message">Message:</label> -->
+                <textarea
+                  class="cutxt"
+                  id="message"
+                  name="message"
+                  placeholder="Message"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+              <button
+                onclick="emailValidation('contact-us-email', 'contact-us-email-error-message')"
+                type="submit"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/index.js"></script>
+    <script>
+      const emailValidation = (emailId, errorMessageId) => {
+        const emailInput = document.getElementById(emailId);
+        const errorMessage = document.getElementById(errorMessageId);
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(emailInput.value)) {
+          event.preventDefault();
+          emailInput.classList.add("error");
+          errorMessage.style.display = "inline";
+        } else {
+          emailInput.classList.remove("error");
+          errorMessage.style.display = "none";
+        }
+
+        document.getElementById(emailId).oninput = () => {
+          errorMessage.style.display = "none";
+        };
+      };
+
+      colorProgressBar = () =>  {
+        const progressBar = document.querySelectorAll('.progress-bar-percentage');
+        
+        progressBar.forEach((stat) => {
+          const progressPercentage = parseInt(stat.querySelector('p').textContent, 10);
+          const hrElement = stat.querySelector('hr');
+          
+          // Calculate the width for the yellow (before) part
+          const progressBarColor = progressPercentage;
+          
+          // Set the CSS custom property to update the widths of the pseudo-elements
+          hrElement.style.setProperty('--before-width', `${progressBarColor}%`);
+        })
+      }
+
+      // Call the function to set the progress bar widths
+      colorProgressBar();
+
+    </script>
+  </body>
+</html>

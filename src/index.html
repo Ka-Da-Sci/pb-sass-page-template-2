@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link
+      rel="icon"
+      href="./assets/images/logo-without-name.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
+      integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- <link rel="stylesheet" href="./build-styles.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style></style>
+  <body>
+    <section
+      id="header"
+      class="animate-[header-anim_0.9s_linear] bg-[#000000] [animation-fill-mode:forwards] fixed z-10 inset-x-0"
+    >
+      <div
+        class="header container mx-auto flex flex-row gap-10 items-center justify-between sm:justify-around h-[76px] px-[5%] py-0"
+      >
+        <a href="./index.html" class="logo-brand-name flex items-center">
+          <img
+            class="w-5 h-[14.15px] sm:w-[35px] sm:h-[24.77px]"
+            src="./assets/images/logo-without-name.svg"
+            alt="logo"
+          />
+          <span
+            class="font-['Space_Grotesk'] text-sm sm:text-lg font-bold leading-normal text-left text-[#FFFFFF] hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+            >Logo</span
+          >
+        </a>
+        <nav
+          class="flex gap-5 flex-col sm:flex-row items-center justify-between w-[45%] sm:w-full fixed sm:static top-14 -right-[100px] bottom-0 bg-[rgba(18,20,29,1)] sm:bg-transparent min-w-[130px] max-w-[300px] sm:max-w-full pl-5 pr-5 py-5 sm:p-0 h-[250px] sm:h-full opacity-0 sm:opacity-100 translate-x-[200px] sm:translate-x-0 [transition:opacity_1s_ease,_transform_1s_ease]"
+        >
+          <ul
+            class="nav-ul flex gap-4 flex-col sm:flex-row items-center justify-center [list-style:none] flex-grow sm:mr-0"
+          >
+            <li class="w-max">
+              <a
+                class="no-underline text-[#FFFFFF] sm:text-[#FFFFFF] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+                href="./index.html"
+                >Demo</a
+              >
+            </li>
+            <li class="w-max">
+              <a
+                class="no-underline text-[#FFFFFF] sm:text-[#FFFFFF] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+                href="./index.html#about-us"
+                >Prices</a
+              >
+            </li>
+            <li class="w-max">
+              <a
+                class="no-underline text-[#FFFFFF] sm:text-[#FFFFFF] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+                href="./index.html#testimonials"
+                >Tools</a
+              >
+            </li>
+            <li class="w-max">
+              <a
+                class="no-underline text-[#FFFFFF] sm:text-[#FFFFFF] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+                href="./index.html#contact-us"
+                >JV DOC</a
+              >
+            </li>
+            <li class="w-max">
+              <a
+                class="no-underline text-[#FFFFFF] sm:text-[#FFFFFF] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+                href="./index.html#contact-us"
+                >Support</a
+              >
+            </li>
+          </ul>
+
+          <a
+            class="bg-[linear-gradient(90deg,_#635BFF_-3.21%,_#4C99BE_99.96%)] rounded-full px-5 py-1 whitespace-nowrap text-[#FFFFFF] font-['Mulish'] antialiased text-xs sm:text-sm font-bold leading-normal text-left"
+            href=""
+            >Affiliate Link</a
+          >
+        </nav>
+        <div class="mobile-toggle block sm:hidden">
+          <img
+            class="icon-menu w-[100%] h-[100%] max-w-5 max-h-[11.25px] block bg-[rgba(249,_253,_243,_1)]"
+            src="./assets/images/icon-menu.svg"
+            alt="menu-toggle-icon"
+          />
+          <img
+            class="icon-close-menu w-[100%] h-[100%] max-w-5 max-h-5 hidden bg-[rgba(249,_253,_243,_1)]"
+            src="./assets/images/icon-close-menu.svg"
+            alt="menu-toggle-icon"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="hero"
+      class="bg-no-repeat bg-cover bg-[linear-gradient(180deg,_#FFFFFF_0%,_rgba(23,_19,_234,_0.7)_116.64%)]"
+    >
+      <!-- <h2 class="bg-[url('./assets/images/hero-bg-img.jpg')]"></h2> -->
+      <div
+        class="hero container mx-auto px-[3%] py-32 sm:pt-36 sm:pb-24 sm:px-[5%] flex gap-5 flex-col justify-center items-center"
+      >
+        <div class="hero-top flex gap-4 flex-col items-center">
+          <p
+            class="border-[3px] border-solid border-[linear-gradient(90deg,_#635BFF_-3.21%,_#4C99BE_99.96%)] py-2 px-4 rounded-2xl text-[#000000] text-center font-['Kumbh_Sans'] antialiased font-semibold text-base"
+          >
+            Qorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <h1
+            class="w-full max-w-full antialiased text-center uppercase font-['Kumbh_Sans'] text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl font-bold text-[#000000]"
+          >
+            BRANDED NEW SOFTWARE LETS YOU RECORD, SCREEN CAPTURE & EDIT VIDEOS
+            IN THE CLOUD <span class="text-blue-500">WITHIN FEW MINUTES</span>!
+          </h1>
+          <p
+            class="capitalize p-2 w-full max-w-[500px] [@media_(max-width:400px)]:max-w-[90%] font-[Inter] font-extrabold text-center text-xs border-2 border-dashed border-[#3682DB] rounded-lg antialiased"
+          >
+            First 100 Action-Takers
+            <span class="font-normal"
+              >Will Get Instant Access To Our “$68,349.23 Case Study” For 100%
+              Free</span
+            >
+            (worth $997).
+          </p>
+        </div>
+
+        <div
+          class="w-full hero-mid flex gap-6 flex-col sm:flex-row items-center justify-center"
+        >
+          <div class="w-full max-w-[650px] flex flex-col gap-2 items-center">
+            <iframe
+              class="w-full h-full rounded-xl aspect-video bg-[url('./assets/images/hero-video-bg.png')] bg-cover bg-no-repeat"
+              src="https://www.youtube.com/embed/1XtPOuixcy4"
+              title="Introducing the Roland AeroCaster Livestreaming System"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+
+          <div
+            class="flex flex-col gap-14 justify-center items-center bg-[#722EF7] rounded-xl w-full max-w-[400px] py-10 px-4"
+          >
+          <div class="flex items-center gap-3">
+            <span class="w-full h-full max-w-16 max-h-16 flex justify-center">
+              <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/launch-rocket.svg" alt="icon">
+            </span>
+            <span class="flex flex-col gap-1 w-full min-w-max">
+              <p class="text-[#FFFFFF] font-['Kumbh_Sans'] text-left font-bold text-sm md:text-base antialiased">Launch Starts</p>
+              <p class="text-[#FFFFFF] font-['Kumbh_Sans'] text-left font-normal text-xs sm:text-sm antialiased">Saturday 30th, August 2024</p>
+              <p class="text-[#FFFFFF] font-['Kumbh_Sans'] text-left font-normal text-xs sm:text-sm antialiased">@ 10pm UTH</p>
+            </span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="w-full h-full max-w-16 max-h-16 flex justify-center">
+              <img class="w-auto h-auto max-w-full max-h-full" src="./assets/images/count-down-clock.svg" alt="icon">
+            </span>
+            <span class="flex flex-col gap-1 w-full min-w-max">
+              <p class="text-[#FFFFFF] font-['Kumbh_Sans'] text-left font-bold text-sm md:text-base antialiased">Launch Ends</p>
+              <p class="text-[#FFFFFF] font-['Kumbh_Sans'] text-left font-normal text-xs sm:text-sm antialiased">Saturday 30th, August 2024</p>
+              <p class="text-[#FFFFFF] font-['Kumbh_Sans'] text-left font-normal text-xs sm:text-sm antialiased">@ 10pm UTH</p>
+            </span>
+          </div>
+          <p class="bg-[#FFFFFF] rounded-full py-1 px-8 text-['Mulish'] text-[#000000] font-bold antialiased text-xs md:text-sm">Grab Your Affiliate Link Here</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-us" class="bg-[#150336] py-20">
+      <div class="contact-form bg-[#C0BFF6] p-10 rounded-xl container mx-auto flex justify-center gap-6 flex-col items-center font-['Kumbh_Sans'] w-full max-w-[700px]">
+        <div class="font-['Kumbh Sans']">
+          <h3>Sign Up To Be On Our VIP Priority List</h3>
+        </div>
+        <form class="form-container flex flex-col gap-4 w-full sm:w-[500px]">
+          <div class="fname mx-auto w-full max-w-[250px]">
+            <!-- <label for="fname">Full Name:</label> -->
+            <input
+              class="cu antialiased  bg-[#FFFFFF] rounded-lg outline-0 font-['Kumbh_Sans'] text-xs font-normal text-left w-full px-[14px] py-2 text-[rgba(51,51,51,1)] bg-[rgba(242,242,242,1)] border-none"
+              type="text"
+              id="fname"
+              name="fullName"
+              placeholder="Full Name"
+              required
+            />
+          </div>
+          <div class="email mx-auto w-full max-w-[250px] relative">
+            <!-- <label for="email">Email:</label> -->
+            <input
+              class="cu antialiased  bg-[#FFFFFF] rounded-lg outline-0 font-['Kumbh_Sans'] text-xs font-normal text-left w-full px-[14px] py-2 text-[rgba(51,51,51,1)] bg-[rgba(242,242,242,1)] border-none"
+              type="email"
+              id="contact-us-email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <span class="error-message text-xs text-red-500 antialiased hidden absolute -bottom-[15px] left-0" id="contact-us-email-error-message"
+              >Please enter a valid email address.</span
+            >
+          </div>
+
+          <button class="row-start-5 row-end-6 col-[span_2] px-[10px] py-1 text-[rgba(255,255,255,1)] bg-[rgba(63,123,255,1)] border border-solid border-[rgba(63,123,255,1)] rounded-full font-['Kumbh_Sans'] font-medium text-base"
+            onclick="emailValidation('contact-us-email', 'contact-us-email-error-message')"
+            type="submit"
+          >
+          Signup To The VIP JVs List
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <script src="./assets/index.js"></script>
+    <script>
+      const startTimer = async (duration, display) => {
+        let timer = duration;
+        const {
+          timerContainer,
+          daysLeft,
+          hoursLeft,
+          minutesLeft,
+          secondsLeft,
+        } = display;
+
+        const countdownInterval = setInterval(() => {
+          // Calculate days, hours, minutes, and seconds
+          const days = Math.floor(timer / (60 * 60 * 24));
+          const hours = Math.floor((timer % (60 * 60 * 24)) / (60 * 60));
+          const minutes = Math.floor((timer % (60 * 60)) / 60);
+          const seconds = timer % 60;
+
+          // Format each unit with leading zeros if necessary
+          const formattedDays = String(days).padStart(2, "0");
+          const formattedHours = String(hours).padStart(2, "0");
+          const formattedMinutes = String(minutes).padStart(2, "0");
+          const formattedSeconds = String(seconds).padStart(2, "0");
+
+          // console.log(daysLeft);
+          // Update the display with the correct format
+          Array.from(daysLeft).forEach((element) => {
+            element.textContent = formattedDays;
+          });
+          Array.from(hoursLeft).forEach((element) => {
+            element.textContent = formattedHours;
+          });
+          Array.from(minutesLeft).forEach((element) => {
+            element.textContent = formattedMinutes;
+          });
+          Array.from(secondsLeft).forEach((element) => {
+            element.textContent = formattedSeconds;
+          });
+
+          // Store the remaining time in sessionStorage
+          sessionStorage.setItem("timer", timer);
+
+          // Clear the interval if the timer reaches zero
+          if (--timer < 0) {
+            clearInterval(countdownInterval);
+            timerContainer.textContent = "Time's up!";
+            // sessionStorage.removeItem("timer");
+          }
+        }, 1000);
+      };
+
+      // Helper function to calculate the remaining time
+      const calculateRemainingTime = (totalSeconds) => {
+        const storedTime = sessionStorage.getItem("timer");
+        if (storedTime) {
+          // Use the remaining time from sessionStorage
+          return parseInt(storedTime, 10);
+        } else {
+          // Start with the full duration
+          return totalSeconds;
+        }
+      };
+
+      // Start the timer when the DOM is loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        const countdownDisplay = {
+          timerContainer: document.querySelectorAll(".countdown-timer"),
+          daysLeft: document.querySelectorAll(".days-left"),
+          hoursLeft: document.querySelectorAll(".hours-left"),
+          minutesLeft: document.querySelectorAll(".mins-left"),
+          secondsLeft: document.querySelectorAll(".secs-left"),
+        };
+
+        const totalSeconds = 5 * 24 * 60 * 60; // 5 days in seconds (or any duration)
+
+        // Calculate the remaining time
+        const remainingTime = calculateRemainingTime(totalSeconds);
+
+        // Start the timer with the remaining time
+        startTimer(remainingTime, countdownDisplay);
+      });
+    </script>
+  </body>
+</html>

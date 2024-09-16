@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes header-anim {
+    0% {
+      top: -100px;
+    }
+    50% {
+      top: -50px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+}
