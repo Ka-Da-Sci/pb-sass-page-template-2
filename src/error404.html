@@ -26,57 +26,70 @@
   <body>
     <section
       id="header"
-      class="animate-[header-anim_0.9s_linear] bg-[linear-gradient(0deg,_#FFFFFF,_#FFFFFF)] [animation-fill-mode:forwards] fixed z-10 inset-x-0"
+      class="z-20 bg-[#000000] [animation-fill-mode:forwards] fixed inset-x-0"
     >
       <div
         class="header container mx-auto flex flex-row gap-10 items-center justify-between sm:justify-around h-[76px] px-[5%] py-0"
       >
-        <a href="./test.html" class="logo-brand-name flex items-center">
+        <a href="./index.html" class="logo-brand-name flex items-center">
           <img
             class="w-5 h-[14.15px] sm:w-[35px] sm:h-[24.77px]"
             src="./assets/images/logo-without-name.svg"
             alt="logo"
           />
           <span
-            class="font-['Space_Grotesk'] text-sm sm:text-lg font-bold leading-normal text-left text-[rgba(0,_0,_0,_1)] hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+            class="font-['Space_Grotesk'] text-sm sm:text-lg font-bold leading-normal text-left text-[#FFFFFF] hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
             >Logo</span
           >
         </a>
         <nav
-          class="flex gap-5 flex-col sm:flex-row items-center justify-between w-[45%] sm:w-full fixed sm:static top-14 -right-[100px] bottom-0 bg-[rgba(18,20,29,1)] sm:bg-transparent min-w-[130px] max-w-[300px] sm:max-w-full pl-5 pr-5 py-5 sm:p-0 h-[250px] sm:h-full opacity-0 sm:opacity-100 translate-x-[200px] sm:translate-x-0 [transition:opacity_1s_ease,_transform_1s_ease]"
+          class="flex gap-5 flex-col sm:flex-row items-center justify-between w-[45%] sm:w-full fixed sm:static top-[76px] -right-[100px] bg-[rgba(18,20,29,1)] sm:bg-transparent min-w-[130px] max-w-[300px] rounded-bl-lg sm:max-w-full pl-5 pr-5 py-5 sm:pt-0 min-h-min max-h-min opacity-0 sm:opacity-100 translate-x-[200px] sm:translate-x-0 [transition:opacity_1s_ease,_transform_1s_ease]"
         >
           <ul
-            class="nav-ul flex gap-4 flex-col sm:flex-row items-center justify-between [list-style:none] ml-auto mr-auto sm:mr-0"
+            class="nav-ul flex gap-4 flex-col sm:flex-row items-center justify-center [list-style:none] flex-grow sm:mr-0"
           >
             <li class="w-max">
               <a
-                class="no-underline text-[rgba(255,_255,_255,_1)] sm:text-[rgba(0,0,0,1)] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
-                href="./test.html"
-                >Home</a
+                class="no-underline text-[#FFFFFF] sm:text-[#FFFFFF] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+                href="./index.html#demo" onclick="adjustScreen(event)"
+                >Demo</a
               >
             </li>
             <li class="w-max">
               <a
-                class="no-underline text-[rgba(255,_255,_255,_1)] sm:text-[rgba(0,0,0,1)] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
-                href="./test.html#about-us"
-                >About Us</a
+                class="no-underline text-[#FFFFFF] sm:text-[#FFFFFF] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+                href="./index.html#sales-funnel" onclick="adjustScreen(event)"
+                >Prices</a
               >
             </li>
             <li class="w-max">
               <a
-                class="no-underline text-[rgba(255,_255,_255,_1)] sm:text-[rgba(0,0,0,1)] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
-                href="./test.html#testimonials"
-                >Users Experience</a
+                class="no-underline text-[#FFFFFF] sm:text-[#FFFFFF] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+                href="./index.html#tools" onclick="adjustScreen(event)"
+                >Tools</a
               >
             </li>
             <li class="w-max">
               <a
-                class="no-underline text-[rgba(255,_255,_255,_1)] sm:text-[rgba(0,0,0,1)] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
-                href="./test.html#contact-us"
-                >Contact Us</a
+                class="no-underline text-[#FFFFFF] sm:text-[#FFFFFF] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+                href="./error404.html" onclick="adjustScreen(event)"
+                >JV DOC</a
+              >
+            </li>
+            <li class="w-max">
+              <a
+                class="no-underline text-[#FFFFFF] sm:text-[#FFFFFF] font-[Mulish] antialiased text-xs sm:text-sm font-bold leading-normal text-left hover:text-[rgb(152,165,133)] hover:[transition:all_0.5s_ease-in-out]"
+                href="./index.html#contact-us"
+                >Support</a
               >
             </li>
           </ul>
+
+          <a
+            class="bg-[linear-gradient(90deg,_#635BFF_-3.21%,_#4C99BE_99.96%)] w-full max-w-max rounded-full px-5 py-1 text-[#FFFFFF] font-['Mulish'] antialiased text-xs sm:text-sm font-bold leading-normal text-center sm:text-left"
+            href="./index.html#affiliate"
+            >Affiliate Link</a
+          >
         </nav>
         <div class="mobile-toggle block sm:hidden">
           <img

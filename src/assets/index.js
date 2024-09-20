@@ -24,28 +24,6 @@ for (let num = 0; num < navElementChildren.length; num++) {
   });
 }
 
-const ratingsVal = document.getElementById("rating-num").textContent;
-
-const ratingsValFrac = () => {
-  const rawVal = parseFloat(ratingsVal);
-  return rawVal % 1;
-}
-
-const caliberateRating = (event) => {
-  const ratingsPar = document.getElementById("star-ratings");
-  const ratingsParChildren = ratingsPar.children;
-  
-  Array.from(ratingsParChildren).slice(0, parseInt(Math.floor(ratingsVal))).forEach((rating) => {
-    rating.classList.remove("bg-gray-500");
-    rating.classList.add("bg-yellow-500");
-  })
-  if (ratingsValFrac() > 0.3 && parseInt(Math.floor(ratingsVal)) < 5){
-    ratingsParChildren[parseInt(Math.floor(ratingsVal))].classList.remove("bg-gray-500");
-    ratingsParChildren[parseInt(Math.floor(ratingsVal))].classList.add('bg-[linear-gradient(to_right,_yellow,_gray)]')
-  }
-}
-caliberateRating();
-
 // Manages Mobile Menu Toggles
 document.addEventListener("click", (event) => {
   const mobileMenu = document.querySelector("nav");
@@ -81,112 +59,35 @@ document.addEventListener("click", (event) => {
     }
   }
 });
-const testimonies = document.querySelector(".testimonials-track").children;
 
-document.addEventListener("DOMContentLoaded", () => {
-  let testimonialsCount = 0;
-  let endTestimonialsCount = +testimonialsCount + 3;
-  let slideIndicators = Array.from(document.querySelectorAll(".t-indicators div"));
-  let testimonialSliderIndicators = document.getElementById("t-indicators");
-  
-  // Manages the rendering of the Testimonials section
-  const testimonialsProtocol = () => {
-
-    // testimonialsTrack.innerHTML = "";
-    testimonialSliderIndicators.innerHTML = "";
-    let indicatorCount = 1;
-
-    // Returns 10 if the number of available testimonials is greater than 10, otherwise just return the number of available testimonials.
-    const requiredNum = () => {
-      let num = Array.from(testimonies).length;
-      if (Array.from(testimonies).length > 10){
-        num = 10;
-      } 
-      return num;
-    }
-
-    if (endTestimonialsCount > requiredNum()) {
-      endTestimonialsCount = requiredNum();
-    }
-
-    // creates between 0 and 10 indicator elemnts depending on the value returned by requiredNum function above.
-    for (let seq = 0; seq < requiredNum(); seq++){
-      const testimonialSliderIndicator = document.createElement("div");
-      const testimonialSliderIndicatorText = document.createElement("p");
-      testimonialSliderIndicatorText.textContent = indicatorCount;
-      testimonialSliderIndicator.className = "t-indicator";
-      testimonialSliderIndicator.classList.add('flex', 'items-center', 'justify-center', 'sm:w-[15px]', 'sm:h-[15px]', 'w-[9px]', 'h-[9px]', 'rounded-[50%]', 'cursor-pointer', 'bg-[rgba(217,217,217,1)]');
-      testimonialSliderIndicatorText.classList.add('hidden');
-      testimonialSliderIndicator.id = `t-indicator-${indicatorCount-1}`;
-  
-
-      testimonialSliderIndicator.appendChild(testimonialSliderIndicatorText);
-      testimonialSliderIndicators.appendChild(testimonialSliderIndicator);
-      indicatorCount ++;
-    }
-
-    // Renders the most recent testimonials (number depends on the value returned by requiredNum).
-    Array.from(testimonies).forEach((testimonial) => {
-      testimonial.style.display = "none";
-
-    })
-
-    const targetTestimonies = Array.from(testimonies).slice(0, requiredNum()).slice(testimonialsCount, endTestimonialsCount);
-    targetTestimonies.forEach((testimonial) => {
-      testimonial.style.display = "flex";
-    })
-
-    testimonialSliderIndicators = document.getElementById("t-indicators");
-    slideIndicators = Array.from(document.querySelectorAll(".t-indicators div"));
-    slideIndicators.forEach(indicator => {
-      indicator.classList.remove('bg-[rgba(35,_70,_255,_1)]', 'text-[white]');
-    })
-
-    let indicatorIndex = testimonialsCount;
-    if (testimonialsCount >= Array.from(testimonies).length){
-      indicatorIndex = Array.from(testimonies).length - 1;
-    }
-    const testimnlChildren = testimonialSliderIndicators.children;
-    testimnlChildren[indicatorIndex].classList.remove('bg-[rgba(217,217,217,1)]');
-    testimnlChildren[indicatorIndex].classList.add('bg-[rgba(35,_70,_255,_1)]', 'text-[white]');
-
+const adjustScreen = (event) => {
+  // event.preventDefault();
+  if (event.target.href !== window.location.href) {
+    sessionStorage.setItem('scrollAfterLoad', 'true');
   }
 
-  document.addEventListener("click",  (event) => {
-    let indicatorIndexes = document.querySelectorAll(".t-indicators div");
-    indicatorIndexes.forEach(index => {
-      if (index.contains(event.target)){
-        indicatorIndexes.forEach(indexed => {
-          indexed.classList.remove('bg-[rgba(35,_70,_255,_1)]', 'text-[white]');
-        })
-        const indexId = index.id;
-        const slicedIndex = indexId.split("t-indicator-");
-        testimonialsCount = slicedIndex[slicedIndex.length-1];
-        endTestimonialsCount = +testimonialsCount + 3;
-        console.log(testimonialsCount);
-        testimonialsProtocol();
+  setTimeout(() => {
+    window.scrollBy(
+      {
+        top: -76,
+        behavior: 'smooth'
       }
-    })
-  })
+    ), 5})
+}
 
-  // testimonialsProtocol();
-
-  const testimonialCarouselSlider = () => {
-    testimonialsProtocol();
-    if (testimonialsCount <= Array.from(testimonies).length - 1){
-      testimonialsCount ++;
-      endTestimonialsCount = testimonialsCount + 3;
-    } else{
-      testimonialsCount = 0;
-      endTestimonialsCount = testimonialsCount + 3;
-      testimonialCarouselSlider();
-    }
+// Check on page load whether to scroll
+window.addEventListener('load', ()=> {
+  if (sessionStorage.getItem('scrollAfterLoad') === 'true') {
+    window.scrollBy({
+      top: -76,
+      behavior: 'smooth'
+    });
+    sessionStorage.removeItem('scrollAfterLoad'); // Clean up
   }
-
-  testimonialCarouselSlider();
-
-  setInterval(testimonialCarouselSlider, 20000);
 });
+
+
+// adjustScreen();
 
 // EMAIL FORM INPUTS VALIDATION FUNCTION
 const emailValidation = (emailId, errorMessageId) => {
