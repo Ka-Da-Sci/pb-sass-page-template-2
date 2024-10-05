@@ -87,8 +87,6 @@ window.addEventListener('load', ()=> {
 });
 
 
-// adjustScreen();
-
 // EMAIL FORM INPUTS VALIDATION FUNCTION
 const emailValidation = (emailId, errorMessageId) => {
   const emailInput = document.getElementById(emailId);
