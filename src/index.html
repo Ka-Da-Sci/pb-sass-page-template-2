@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="author" content="Bernard (design), Prosper Kachi (code)" />
+    <meta
+      name="description"
+      content="Template created for Geecore Limited’s Wivali AI website builder platform"
+    />
+    <meta name="copyright" content="Xalphabet" />
     <title>Landing Page</title>
     <link
       rel="icon"
@@ -28,7 +34,6 @@
     <!-- <link rel="stylesheet" href="./build-styles.css"> -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <style></style>
   <body>
     <section
       id="header"
@@ -245,26 +250,54 @@
             <input
               class="cu antialiased bg-[#FFFFFF] rounded-lg outline-0 font-['Montserrat'] text-xs font-normal text-left w-full px-[14px] py-2 text-[#000000] border-none"
               type="email"
-              id="contact-us-email"
+              id="sign-up-email"
               name="email"
               placeholder="Email"
               required
             />
             <span
               class="error-message text-xs text-red-500 antialiased hidden absolute -bottom-[15px] left-0"
-              id="contact-us-email-error-message"
+              id="sign-up-email-error-message"
               >Please enter a valid email address.</span
             >
           </div>
 
           <button
             class="px-2 py-1 text-[#FFFFFF] w-full max-w-[350px] bg-blue-700 border border-solid border-blue-500 rounded-full font-['Kumbh_Sans'] font-medium text-base"
-            onclick="emailValidation('contact-us-email', 'contact-us-email-error-message')"
             type="submit"
           >
             Signup To The VIP JVs List
           </button>
         </form>
+
+
+                <div id="hover-card" class="w-full hidden">
+          <div class="fixed inset-0 bg-black opacity-80 z-40"></div>
+          <div class="fixed inset-0 flex items-center justify-center z-50">
+            <div
+              class="bg-white rounded-lg mx-4 p-4 w-full max-w-2xl max-sm:text-center flex flex-col items-center gap-8"
+            >
+              <div class="w-full flex flex-col gap-2 items-center font-poppins">
+                <h2
+                  id="hover-card-header-text"
+                  class="text-lg font-poppins font-bold text-[#1E1E1E]"
+                ></h2>
+                <p
+                  id="hover-card-body-text"
+                  class="text-sm sm:text-base font-poppins font-normal text-[#1E1E1E]"
+                ></p>
+              </div>
+              <div class="flex justify-end gap-2">
+                <button
+                  onclick="toggleHoverCard()"
+                  class="bg-[#0053FA] px-8 py-1.5 text-white font-poppins font-normal rounded-lg"
+                >
+                  Okay
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
